@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
+import '../preferredLocation/preferredLocation.dart';
+
 class WorkType extends StatefulWidget {
   const WorkType({super.key});
 
@@ -147,7 +149,10 @@ class _WorkTypeState extends State<WorkType> {
                 child: OutlinedButton(
                   onPressed: isAnyTypeChecked()
                       ? () {
-                          print("good");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PreferredLocation()));
                         }
                       : null,
                   style: ButtonStyle(

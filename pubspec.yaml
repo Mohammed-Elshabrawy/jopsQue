@@ -67,6 +67,20 @@ flutter:
      - lib/Consts/Assets/Background3.png
      - lib/Consts/Logo/google.png
      - lib/Consts/Logo/Facebook.png
+     - lib/Consts/Assets/flags/Argentina.png
+     - lib/Consts/Assets/flags/Brazil.png
+     - lib/Consts/Assets/flags/Canada.png
+     - lib/Consts/Assets/flags/China.png
+     - lib/Consts/Assets/flags/Ellipse 804.png
+     - lib/Consts/Assets/flags/India.png
+     - lib/Consts/Assets/flags/Indonesia.png
+     - lib/Consts/Assets/flags/mal.png
+     - lib/Consts/Assets/flags/Philiphines.png
+     - lib/Consts/Assets/flags/Polandia.png
+     - lib/Consts/Assets/flags/Saudi Arabia.png
+     - lib/Consts/Assets/flags/sin.png
+     - lib/Consts/Assets/flags/Vietnam.png
+     - lib/Consts/Assets/Success Account Ilustration.png
 
 
 
