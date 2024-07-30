@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jopsque0/Screens/Forgot%20Password/CreatNewPass/CreatNewPass.dart';
 
-import '../../CreatAccount/GetStarted/GetStarted.dart';
 class CheckUrEmail extends StatefulWidget {
   const CheckUrEmail({super.key});
 
