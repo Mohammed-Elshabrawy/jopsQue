@@ -9,11 +9,7 @@ class myChip extends  StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChoiceChip(label:  Text(country,style: TextStyle(fontWeight:FontWeight.w400,fontSize: 16,color: Color(0xff111827))), selected: checked,
-      onSelected: onPressed/*(newState){
-setState(() {
-us = newState;
-});
-}*/,
+      onSelected: onPressed,
       avatar: Image.asset(flagLocation),
       selectedColor: Color(0xffD6E4FF),
       showCheckmark: false,

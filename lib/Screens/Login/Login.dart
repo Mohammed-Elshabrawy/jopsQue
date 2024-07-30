@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jopsque0/Screens/Forgot%20Password/ForgotPassword/ForgotPassword.dart';
+import 'package:jopsque0/Screens/HomeScreen/NavBar/BotNavBar.dart';
 import '../CreatAccount/SignUp/CreateAccount.dart';
 import '../SplashScreen/Slider Screens/prelog.dart';
 class Login extends StatefulWidget {
@@ -222,7 +223,7 @@ class _LoginState extends State<Login>  {
               Column(children: [
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Already have an account?  ",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color:Color(0xff9CA3AF) ),),
+                    const Text("Don’t have an account?  ",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color:Color(0xff9CA3AF) ),),
                     TextButton(onPressed: (){
                       Navigator.push(
                           context,
@@ -243,7 +244,10 @@ class _LoginState extends State<Login>  {
                   child: OutlinedButton(
                     onPressed: checkForData() ?() async {
                       if(formKey.currentState!.validate()){
-                        print("great");
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const BotNavBar(currentIndex: 0)));
                       }
                     }:null,
                     style: ButtonStyle(
