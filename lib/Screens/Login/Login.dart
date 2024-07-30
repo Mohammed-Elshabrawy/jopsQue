@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jopsque0/Screens/Forgot%20Password/ForgotPassword/ForgotPassword.dart';
 import '../CreatAccount/SignUp/CreateAccount.dart';
 import '../SplashScreen/Slider Screens/prelog.dart';
 class Login extends StatefulWidget {
@@ -8,12 +9,10 @@ class Login extends StatefulWidget {
   @override
   State<Login> createState() => _LoginState();
 }
-
 class _LoginState extends State<Login>  {
   final emailCon =TextEditingController();
   final passCon =TextEditingController();
   final formKey =GlobalKey<FormState>();
-
   var c = const Color(0xff9CA3AF);
   var e = Colors.white;
   var p = const Color(0xff9CA3AF);
@@ -195,14 +194,14 @@ class _LoginState extends State<Login>  {
 
                            ),
                          ),
-                         SizedBox(width: 10,),
-                         Text("Remember me",style: TextStyle(color: Color(0xff1F2937),fontSize: 14,fontWeight: FontWeight.w400),),
-                         Spacer(),
+                         const SizedBox(width: 10,),
+                         const Text("Remember me",style: TextStyle(color: Color(0xff1F2937),fontSize: 14,fontWeight: FontWeight.w400),),
+                         const Spacer(),
                          TextButton(onPressed: (){
                            Navigator.push(
                                context,
                                MaterialPageRoute(
-                                   builder: (context) => const CreateAccount()));
+                                   builder: (context) => const ForgotPassword()));
                          },
                            style: TextButton.styleFrom(
                                padding: EdgeInsets.zero,

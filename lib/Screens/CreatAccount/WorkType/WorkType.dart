@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../preferredLocation/preferredLocation.dart';
 
 class WorkType extends StatefulWidget {
