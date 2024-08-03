@@ -187,3 +187,119 @@ class SuggestedJob extends StatelessWidget{
   }
 
 }
+
+class RecentJop extends StatelessWidget{
+  const RecentJop({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+   return Column(
+     children: [
+       Row(
+         children: [
+           const Text("Recent Job",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+           const Spacer(),
+           TextButton(onPressed: (){}, child: Text("View all",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14,color:Color(0xff3366FF) ),))
+         ],
+       ),
+       SizedBox(height: 10,),
+       Container(
+         height: 100,
+         child: Column(
+           children: [
+             Row(
+               children: [
+                 Image.asset("lib/Consts/Logo/Twitter Logo.png"),
+                 const Spacer(),
+                 const Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Text("Senior UI Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+                     SizedBox(height: 5,),
+                     Text("Twitter • Jakarta, Indonesia ",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff374151)),),
+                   ],
+                 ),
+                 const Spacer(),
+                 IconButton(onPressed: (){},iconSize: 24, icon: Icon(Icons.bookmark,color: Color(0xff3366FF),size: 24,))
+
+               ],
+             ),
+             Spacer(),
+             Row(
+               crossAxisAlignment: CrossAxisAlignment.end,
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 SizedBox(height: 35,
+                   child: Chip(label: const Text("Fulltime",style: TextStyle(color: Color(0xff3366FF),fontSize: 12),),
+                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
+                           0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox( height: 35,
+                   child: Chip(label: const Text("Remote",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                       backgroundColor: const Color(0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox(height: 35, child: Chip(label: const Text("Senior",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xffD6E4FF))),
+                 const Spacer(),
+                 const Text("\$15K",style: TextStyle(color: Color(0xff2E8E18),fontWeight: FontWeight.w500,fontSize: 16),),
+                 const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
+               ],
+             ),
+           ],
+         ),
+       ),
+       SizedBox(height: 10,),
+       Divider(),
+       SizedBox(height: 10,),
+       Container(
+         height: 100,
+         child: Column(
+           children: [
+             Row(
+               children: [
+                 Image.asset("lib/Consts/Logo/Discord Logo.png"),
+                 const Spacer(),
+                 const Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Text("Senior UX Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+                     SizedBox(height: 5,),
+                     Text("Discord • Jakarta, Indonesia ",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff374151)),),
+                   ],
+                 ),
+                 const Spacer(),
+                 IconButton(onPressed: (){},iconSize: 24, icon: Icon(Icons.bookmark_outline,color: Color(0xff111827),size: 24,))
+
+               ],
+             ),
+             Spacer(),
+             Row(
+               crossAxisAlignment: CrossAxisAlignment.end,
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 SizedBox(height: 35,
+                   child: Chip(label: const Text("Fulltime",style: TextStyle(color: Color(0xff3366FF),fontSize: 12),),
+                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
+                           0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox( height: 35,
+                   child: Chip(label: const Text("Remote",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                       backgroundColor: const Color(0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox(height: 35, child: Chip(label: const Text("Senior",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xffD6E4FF))),
+                 const Spacer(),
+                 const Text("\$15K",style: TextStyle(color: Color(0xff2E8E18),fontWeight: FontWeight.w500,fontSize: 16),),
+                 const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
+               ],
+             ),
+           ],
+         ),
+       ),
+     ],
+   );
+  }
+
+}

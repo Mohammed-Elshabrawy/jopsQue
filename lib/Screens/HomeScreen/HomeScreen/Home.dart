@@ -12,17 +12,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return   const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: Column(
-            children: [
-              WelcomeMessageSearchBar(),
-              SizedBox(height: 10,),
-              SuggestedJob()
-            ],
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                WelcomeMessageSearchBar(),
+                SizedBox(height: 10,),
+                SuggestedJob(),
+                SizedBox(height: 10,),
+                RecentJop()
+              ],
+            ),
           ),
         ),
       ),

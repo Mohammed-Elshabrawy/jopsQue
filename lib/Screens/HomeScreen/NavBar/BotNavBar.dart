@@ -27,7 +27,7 @@ class _BotNavBarState extends State<BotNavBar> {
         body:screens[currentIndex] ,
         bottomNavigationBar: BottomNavigationBar(
           elevation: 100,
-          backgroundColor:Theme.of(context).colorScheme.surface,
+          backgroundColor:Colors.white,
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
           selectedItemColor:const Color(0xff3366FF),
@@ -57,11 +57,8 @@ class _BotNavBarState extends State<BotNavBar> {
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
               label: "Profile",
-
             ),
-
           ],
-
         ),
       ),
     );

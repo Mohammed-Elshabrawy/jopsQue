@@ -84,6 +84,8 @@ flutter:
      - lib/Consts/Assets/Email Ilustration.png
      - lib/Consts/Assets/Password Succesfully Ilustration.png
      - lib/Consts/Logo/Zoom Logo.png
+     - lib/Consts/Logo/Twitter Logo.png
+     - lib/Consts/Logo/Discord Logo.png
 
 
 
