@@ -63,7 +63,7 @@ class Colors {
   static const Color danger100 = Color(0xffFFE7D4);
 
 }
-class Fonts{
+class HeadingText{
   static TextStyle heading1reguler = TextStyle(fontSize: 32,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle heading2reguler = TextStyle(fontSize: 28,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle heading3reguler = TextStyle(fontSize: 24,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
@@ -76,15 +76,28 @@ class Fonts{
   static TextStyle heading4medium = TextStyle(fontSize: 20,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
   static TextStyle heading5medium = TextStyle(fontSize: 18,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
 
-   static TextStyle textLReguler = TextStyle(fontSize: 16,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
-   static TextStyle textLMedium = TextStyle(fontSize: 16,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
+  static TextStyle heading1Bold = TextStyle(fontSize: 32,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+  static TextStyle heading2Bold = TextStyle(fontSize: 28,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+  static TextStyle heading3Bold = TextStyle(fontSize: 24,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+  static TextStyle heading4Bold = TextStyle(fontSize: 20,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+  static TextStyle heading5Bold = TextStyle(fontSize: 18,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+
+}
+class Text{
+
+  static TextStyle textLReguler = TextStyle(fontSize: 16,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
+  static TextStyle textLMedium = TextStyle(fontSize: 16,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
+  static TextStyle textLBold = TextStyle(fontSize: 16,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
 
   static TextStyle textMReguler = TextStyle(fontSize: 14,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle textMMedium = TextStyle(fontSize: 14,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
+  static TextStyle textMBold = TextStyle(fontSize: 14,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
 
   static TextStyle textSReguler = TextStyle(fontSize: 12,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle textSMedium = TextStyle(fontSize: 12,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
+  static TextStyle textSBold = TextStyle(fontSize: 12,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
 
   static TextStyle textXSReguler = TextStyle(fontSize: 15,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle textXSMedium = TextStyle(fontSize: 15,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");
+  static TextStyle textXSBold = TextStyle(fontSize: 15,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
 }
