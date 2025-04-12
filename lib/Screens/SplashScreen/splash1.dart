@@ -32,7 +32,7 @@ class _Splash1State extends State<Splash1> {
     setState(() {
       h = 750;
       w = 500;
-      c = Color(0xc1cff6);
+      c = const Color(0xc1cff6);
     });
   }
 
@@ -61,7 +61,7 @@ class _Splash1State extends State<Splash1> {
                   color: c,
                 ),
                 duration: const Duration(seconds: 2),
-                child: SizedBox(
+                child: const SizedBox(
                   height: 10,
                 ),
               ),

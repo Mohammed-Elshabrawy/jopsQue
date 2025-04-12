@@ -1,6 +1,6 @@
-import 'dart:ui';
 
-class Colors {
+import 'package:flutter/material.dart';
+class Cols {
 
   static const Color neutral900 = Color(0xff111827);
   static const Color neutral800 = Color(0xff1F2937);
@@ -62,9 +62,30 @@ class Colors {
   static const Color danger200 = Color(0xffFFC9AA);
   static const Color danger100 = Color(0xffFFE7D4);
 
+  static Color v=Color(0xffFFC9AA);
+
+
+  
+
+
+  
+
 }
-class HeadingText{
-  static TextStyle heading1reguler = TextStyle(fontSize: 32,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
+
+
+class HeadingTexts {
+  static Color  Cho= Cols.neutral900 ;
+  static setColor({ required var v}){
+    Cho = v;
+    return Cho;
+  }
+  //static late String cho;
+  static GetFont({ required var v}){
+  //  return this;
+}
+
+
+  static TextStyle heading1reguler = TextStyle(fontSize: 32,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display",color: Cho );
   static TextStyle heading2reguler = TextStyle(fontSize: 28,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle heading3reguler = TextStyle(fontSize: 24,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle heading4reguler = TextStyle(fontSize: 20,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
@@ -81,9 +102,15 @@ class HeadingText{
   static TextStyle heading3Bold = TextStyle(fontSize: 24,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
   static TextStyle heading4Bold = TextStyle(fontSize: 20,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
   static TextStyle heading5Bold = TextStyle(fontSize: 18,fontWeight: FontWeight.w900,fontFamily:"SF Pro Display");
+  /*static  TextStyle getFont({ required String v}){
+    return Cols.v;
+  }*/
+  /*TextStyle getFontColore(String color,String font){
+    return TextStyle(color: super.getColor(color),fontFamily: font);
+  }*/
 
 }
-class Text{
+class Texte{
 
   static TextStyle textLReguler = TextStyle(fontSize: 16,fontWeight: FontWeight.w400,fontFamily:"SF Pro Display");
   static TextStyle textLMedium = TextStyle(fontSize: 16,fontWeight: FontWeight.w500,fontFamily:"SF Pro Display");

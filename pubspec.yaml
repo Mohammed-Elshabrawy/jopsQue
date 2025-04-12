@@ -47,6 +47,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  flutter_markdown: ^0.7.6+2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -86,6 +87,7 @@ flutter:
      - lib/Consts/Logo/Zoom Logo.png
      - lib/Consts/Logo/Twitter Logo.png
      - lib/Consts/Logo/Discord Logo.png
+     - lib/Consts/Logo/Slack Logo.png
 
 
 

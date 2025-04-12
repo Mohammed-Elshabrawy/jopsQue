@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Jop info/JopInfo.dart';
+
 class WelcomeMessageSearchBar extends StatelessWidget{
   const WelcomeMessageSearchBar({super.key});
 
@@ -56,9 +58,9 @@ class SuggestedJob extends StatelessWidget{
      children: [
        Row(
          children: [
-           Text("Suggested Job",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
-           Spacer(),
-           TextButton(onPressed: (){}, child: Text("View all",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14,color:Color(0xff3366FF) ),))
+           const Text("Suggested Job",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+           const Spacer(),
+           TextButton(onPressed: (){}, child: const Text("View all",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14,color:Color(0xff3366FF) ),))
          ],
        ),
        const SizedBox(height: 10,),
@@ -66,67 +68,72 @@ class SuggestedJob extends StatelessWidget{
          scrollDirection: Axis.horizontal,
          child: Row(
            children: [
-             Container(
-               decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(12),
-                   color: Color(0xff091A7A)
-               ),
-               height: 200,
-               width: 300,
-               padding: const EdgeInsets.all(20),
-               child: Column(
-                 children: [
-                   Row(
-                     children: [
-                       Image.asset("lib/Consts/Logo/Zoom Logo.png"),
-                       const Spacer(),
-                       const Column(
-                         crossAxisAlignment: CrossAxisAlignment.start,
-                         children: [
-                           Text("Product Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.white),),
-                           SizedBox(height: 5,),
-                           Text("Zoom • United States",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
-                         ],
-                       ),
-                       const Spacer(),
-                       IconButton(onPressed: (){},iconSize: 24, icon: Icon(Icons.bookmark_border_outlined,color: Colors.white,size: 24,))
+             GestureDetector(
+               onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => const JopInfo()));
+               },
+               child: Container(
+                 decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(12),
+                     color: const Color(0xff091A7A)
+                 ),
+                 height: 200,
+                 width: 300,
+                 padding: const EdgeInsets.all(20),
+                 child: Column(
+                   children: [
+                     Row(
+                       children: [
+                         Image.asset("lib/Consts/Logo/Zoom Logo.png"),
+                         const Spacer(),
+                         const Column(
+                           crossAxisAlignment: CrossAxisAlignment.start,
+                           children: [
+                             Text("Product Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.white),),
+                             SizedBox(height: 5,),
+                             Text("Zoom • United States",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
+                           ],
+                         ),
+                         const Spacer(),
+                         IconButton(onPressed: (){},iconSize: 24, icon: const Icon(Icons.bookmark_border_outlined,color: Colors.white,size: 24,))
 
-                     ],
-                   ),
-                   Spacer(),
-                   Row(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
-                       Chip(label: Text("Fulltime",style: TextStyle(color: Colors.white),),
-                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
-                               0xff2c3a8c)),
-                       SizedBox(width: 5,),
-                       Chip(label: Text("Remote",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-                           backgroundColor: Color(0xff2c3a8c)),
-                       SizedBox(width: 5,),
-                       Chip(label: Text("Design",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xff2c3a8c)),
+                       ],
+                     ),
+                     Spacer(),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                       children: [
+                         Chip(label: Text("Fulltime",style: TextStyle(color: Colors.white),),
+                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
+                                 0xff2c3a8c)),
+                         SizedBox(width: 5,),
+                         Chip(label: Text("Remote",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                             backgroundColor: Color(0xff2c3a8c)),
+                         SizedBox(width: 5,),
+                         Chip(label: Text("Design",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xff2c3a8c)),
 
-                     ],
-                   ),
-                   Spacer(),
-                   Row(
-                     crossAxisAlignment: CrossAxisAlignment.end,
-                     children: [
-                       const Text("\$12K-15K",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 24),),
-                       const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
-                       const Spacer(),
-                       OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Color(0xff3366FF))), child: Text("Apply now",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12,color: Colors.white),))
+                       ],
+                     ),
+                     Spacer(),
+                     Row(
+                       crossAxisAlignment: CrossAxisAlignment.end,
+                       children: [
+                         const Text("\$12K-15K",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 24),),
+                         const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
+                         const Spacer(),
+                         OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Color(0xff3366FF))), child: Text("Apply now",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12,color: Colors.white),))
 
-                     ],
-                   )
-                 ],
+                       ],
+                     )
+                   ],
+                 ),
                ),
              ),
-             SizedBox(width: 10,),
+             const SizedBox(width: 10,),
              Container(
                decoration: BoxDecoration(
                    borderRadius: BorderRadius.circular(12),
-                   color: Color(0xffF4F4F5)
+                   color: const Color(0xffF4F4F5)
                ),
                height: 200,
                width: 300,
@@ -135,18 +142,18 @@ class SuggestedJob extends StatelessWidget{
                  children: [
                    Row(
                      children: [
-                       Image.asset("lib/Consts/Logo/Zoom Logo.png"),
+                       Image.asset("lib/Consts/Logo/Slack Logo.png"),
                        const Spacer(),
                        const Column(
                          crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
-                           Text("Product Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.white),),
+                           Text("Product Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
                            SizedBox(height: 5,),
-                           Text("Zoom • United States",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
+                           Text("Slack • United States",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff374151)),),
                          ],
                        ),
                        const Spacer(),
-                       IconButton(onPressed: (){},iconSize: 24, icon: Icon(Icons.bookmark_border_outlined,color: Colors.white,size: 24,))
+                       IconButton(onPressed: (){},iconSize: 24, icon: const Icon(Icons.bookmark_border_outlined,color: Color(0xff1F2937),size: 24,))
 
                      ],
                    ),
@@ -154,14 +161,14 @@ class SuggestedJob extends StatelessWidget{
                    Row(
                      mainAxisAlignment: MainAxisAlignment.center,
                      children: [
-                       Chip(label: Text("Fulltime",style: TextStyle(color: Colors.white),),
+                       Chip(label: Text("Fulltime",style: TextStyle(color: Color(0xff3366FF)),),
                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
-                               0xff2c3a8c)),
+                               0xffD6E4FF)),
                        SizedBox(width: 5,),
-                       Chip(label: Text("Remote",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-                           backgroundColor: Color(0xff2c3a8c)),
+                       Chip(label: Text("Remote",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                           backgroundColor: Color(0xffD6E4FF)),
                        SizedBox(width: 5,),
-                       Chip(label: Text("Design",style: TextStyle(color: Colors.white),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xff2c3a8c)),
+                       Chip(label: const Text("Design",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(0xffD6E4FF)),
 
                      ],
                    ),
@@ -169,7 +176,7 @@ class SuggestedJob extends StatelessWidget{
                    Row(
                      crossAxisAlignment: CrossAxisAlignment.end,
                      children: [
-                       const Text("\$12K-15K",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 24),),
+                       const Text("\$12K-15K",style: TextStyle(color: Color(0xff111827),fontWeight: FontWeight.w500,fontSize: 24),),
                        const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
                        const Spacer(),
                        OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Color(0xff3366FF))), child: Text("Apply now",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12,color: Colors.white),))
@@ -298,6 +305,55 @@ class RecentJop extends StatelessWidget{
            ],
          ),
        ),
+       Divider(),
+       SizedBox(height: 10,),
+       Container(
+         height: 100,
+         child: Column(
+           children: [
+             Row(
+               children: [
+                 Image.asset("lib/Consts/Logo/Twitter Logo.png"),
+                 const Spacer(),
+                 const Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Text("Senior UI Designer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+                     SizedBox(height: 5,),
+                     Text("Twitter • Jakarta, Indonesia ",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff374151)),),
+                   ],
+                 ),
+                 const Spacer(),
+                 IconButton(onPressed: (){},iconSize: 24, icon: Icon(Icons.bookmark,color: Color(0xff3366FF),size: 24,))
+
+               ],
+             ),
+             Spacer(),
+             Row(
+               crossAxisAlignment: CrossAxisAlignment.end,
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 SizedBox(height: 35,
+                   child: Chip(label: const Text("Fulltime",style: TextStyle(color: Color(0xff3366FF),fontSize: 12),),
+                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: const Color(
+                           0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox( height: 35,
+                   child: Chip(label: const Text("Remote",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                       backgroundColor: const Color(0xffD6E4FF)),
+                 ),
+                 const SizedBox(width: 5,),
+                 SizedBox(height: 35, child: Chip(label: const Text("Senior",style: TextStyle(color: Color(0xff3366FF)),),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),backgroundColor: Color(0xffD6E4FF))),
+                 const Spacer(),
+                 const Text("\$15K",style: TextStyle(color: Color(0xff2E8E18),fontWeight: FontWeight.w500,fontSize: 16),),
+                 const Text("/Month",style: TextStyle(color: Color(0xff9CA3AF),fontWeight: FontWeight.w500,fontSize: 12),),
+               ],
+             ),
+           ],
+         ),
+       ),
+       SizedBox(height: 10,),
      ],
    );
   }
